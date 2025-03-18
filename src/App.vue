@@ -4,17 +4,34 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <header>
+  <!-- <header>
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
 
+      <Counter></Counter>
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
     </div>
+  </header> -->
+  <header>
+    <nav class="flex space-x-4 mb-8">
+      <RouterLink to="/counter/start" class="text-blue-600 hover:underline"
+        >Counter Start</RouterLink
+      >
+      <RouterLink to="/counter/end" class="text-blue-600 hover:underline">Counter End</RouterLink>
+      <RouterLink to="/api/start" class="text-blue-600 hover:underline">API Start</RouterLink>
+      <RouterLink to="/api/end" class="text-blue-600 hover:underline">API End</RouterLink>
+      <RouterLink to="/navigation/start" class="text-blue-600 hover:underline"
+        >Navigation Start</RouterLink
+      >
+      <RouterLink to="/navigation/end/home" class="text-blue-600 hover:underline"
+        >Navigation End</RouterLink
+      >
+    </nav>
   </header>
 
   <RouterView />
